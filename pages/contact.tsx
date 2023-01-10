@@ -2,16 +2,15 @@ import { MainLayout } from "../components/layouts/MainLayout";
 import Link from "next/link";
 import { ReactElement } from "react";
 
-export default function Home() {
+export default function ContactPage() {
   return (
     <>
-      <h1 className={"title"}>Home</h1>
+      <h1 className={"title"}>Contact Page</h1>
       <h1 className={"title"}>
-        {/* Pagina About<a href="/About"></a> */}
         Ir a{" "}
-        <Link href="/about" replace>
+        <Link href="/" replace>
           {" "}
-          About{" "}
+          Home{" "}
         </Link>
       </h1>
 
@@ -22,6 +21,6 @@ export default function Home() {
   );
 }
 
-Home.getLayout = function getLayout(page: ReactElement) {
+ContactPage.getLayout = function getLayout(page: ReactElement) {
   return <MainLayout>{page}</MainLayout>;
 };
